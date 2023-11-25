@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Geist Sans";
+  src:
+    url("/assets/font/GeistVF.") format("woff2 supports variations"),
+    url("/assets/font/GeistVF.woff2") format("woff2-variations"),
+    url("/assets/font/GeistVF.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-display: swap;
+}
