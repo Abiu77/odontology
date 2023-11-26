@@ -1,80 +1,80 @@
 @font-face {
   font-family: "Geist Sans";
   src:
-    url("/assets/font/Geist-Thin.woff2") format("woff2 supports variations"),
-    url("/assets/font/Geist-Thin.woff2") format("woff2-variations"),
-    url("/assets/font/Geist-Thin.otf") format("opentype");
+    url("../assets/font/Geist-Thin.woff2") format("woff2 supports variations"),
+    url("../assets/font/Geist-Thin.woff2") format("woff2-variations"),
+    url("../assets/font/Geist-Thin.otf") format("opentype");
   font-weight: 100;
 }
 
 @font-face {
   font-family: "Geist Sans";
   src:
-    url("/assets/font/Geist-UltraLight.woff2") format("woff2 supports variations"),
-    url("/assets/font/Geist-UltraLight.woff2") format("woff2-variations"),
-    url("/assets/font/Geist-UltraLight.otf") format("opentype");
+    url("../assets/font/Geist-UltraLight.woff2") format("woff2 supports variations"),
+    url("../assets/font/Geist-UltraLight.woff2") format("woff2-variations"),
+    url("../assets/font/Geist-UltraLight.otf") format("opentype");
   font-weight: 200;
 }
 
 @font-face {
   font-family: "Geist Sans";
   src:
-    url("/assets/font/Geist-Light.woff2") format("woff2 supports variations"),
-    url("/assets/font/Geist-Light.woff2") format("woff2-variations"),
-    url("/assets/font/Geist-Light.otf") format("opentype");
+    url("../assets/font/Geist-Light.woff2") format("woff2 supports variations"),
+    url("../assets/font/Geist-Light.woff2") format("woff2-variations"),
+    url("../assets/font/Geist-Light.otf") format("opentype");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Geist Sans";
   src:
-    url("/assets/font/Geist-Regular.woff2") format("woff2 supports variations"),
-    url("/assets/font/Geist-Regular.woff2") format("woff2-variations"),
-    url("/assets/font/Geist-Regular.otf") format("opentype");
+    url("../assets/font/Geist-Regular.woff2") format("woff2 supports variations"),
+    url("../assets/font/Geist-Regular.woff2") format("woff2-variations"),
+    url("../assets/font/Geist-Regular.otf") format("opentype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Geist Sans";
   src:
-    url("/assets/font/Geist-Medium.woff2") format("woff2 supports variations"),
-    url("/assets/font/Geist-Medium.woff2") format("woff2-variations"),
-    url("/assets/font/Geist-Medium.otf") format("opentype");
+    url("../assets/font/Geist-Medium.woff2") format("woff2 supports variations"),
+    url("../assets/font/Geist-Medium.woff2") format("woff2-variations"),
+    url("../assets/font/Geist-Medium.otf") format("opentype");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Geist Sans";
   src:
-    url("/assets/font/Geist-SemiBold.woff2") format("woff2 supports variations"),
-    url("/assets/font/Geist-SemiBold.woff2") format("woff2-variations"),
-    url("/assets/font/Geist-SemiBold.otf") format("opentype");
+    url("../assets/font/Geist-SemiBold.woff2") format("woff2 supports variations"),
+    url("../assets/font/Geist-SemiBold.woff2") format("woff2-variations"),
+    url("../assets/font/Geist-SemiBold.otf") format("opentype");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Geist Sans";
   src:
-    url("/assets/font/Geist-Bold.woff2") format("woff2 supports variations"),
-    url("/assets/font/Geist-Bold.woff2") format("woff2-variations"),
-    url("/assets/font/Geist-Bold.otf") format("opentype");
+    url("../assets/font/Geist-Bold.woff2") format("woff2 supports variations"),
+    url("../assets/font/Geist-Bold.woff2") format("woff2-variations"),
+    url("../assets/font/Geist-Bold.otf") format("opentype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: "Geist Sans";
   src:
-    url("/assets/font/Geist-UltraBlack.woff2") format("woff2 supports variations"),
-    url("/assets/font/Geist-UltraBlack.woff2") format("woff2-variations"),
-    url("/assets/font/Geist-UltraBlack.otf") format("opentype");
+    url("../assets/font/Geist-UltraBlack.woff2") format("woff2 supports variations"),
+    url("../assets/font/Geist-UltraBlack.woff2") format("woff2-variations"),
+    url("../assets/font/Geist-UltraBlack.otf") format("opentype");
   font-weight: 800;
 }
 
 @font-face {
   font-family: "Geist Sans";
   src:
-    url("/assets/font/Geist-Black.woff2") format("woff2 supports variations"),
-    url("/assets/font/Geist-Black.woff2") format("woff2-variations"),
-    url("/assets/font/Geist-Black.otf") format("opentype");
+    url("../assets/font/Geist-Black.woff2") format("woff2 supports variations"),
+    url("../assets/font/Geist-Black.woff2") format("woff2-variations"),
+    url("../assets/font/Geist-Black.otf") format("opentype");
   font-weight: 900;
 }
