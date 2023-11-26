@@ -2,10 +2,10 @@
   // Importa la configuración de la base de datos
   include '../config/db.php';
 
-  $email = $_POST['email'];
+  $email = $_POST['correo'];
   $password = $_POST['contrasenia'];
 
-  $validate = mysqli_query($connect, "SELECT * FROM users WHERE email='$email' AND password='$password'");
+  $validate = mysqli_query($connect, "SELECT * FROM users WHERE correo='$email' AND contrasenia='$password'");
 
   if (mysqli_num_rows($validate) > 0) {
     $data = mysqli_fetch_array($validate);
