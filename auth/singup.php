@@ -8,8 +8,11 @@
   $email = $_POST['correo'];
   $password = $_POST['contrasenia'];
 
-  $query = "INSERT INTO erpo_usersistema (nombre, apellido, username, correo, contrasenia)
-  VALUES ('$name', '$lastname', '$username', '$email', '$password')";
+  // Genera un hash seguro de la contraseña
+  $hashedPassword = password_hash($password, PASSWORD_DEFAULT); 
+
+  $query = "INSERT INTO erpo_usersistema (nombre, apellido, username, correo, contrasenia, fingerprint)
+  VALUES ('$name', '$lastname', '$username', '$email', '$hashedPassword', '')";
 
   $execute = mysqli_query($connect, $query);
 

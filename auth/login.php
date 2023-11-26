@@ -5,20 +5,27 @@
   $email = $_POST['correo'];
   $password = $_POST['contrasenia'];
 
-  $validate = mysqli_query($connect, "SELECT * FROM users WHERE correo='$email' AND contrasenia='$password'");
+  // Busca el usuario por su correo electrónico
+  $result = mysqli_query($connect, "SELECT * FROM erpo_usersistema WHERE correo='$email'");
 
-  if (mysqli_num_rows($validate) > 0) {
-    $data = mysqli_fetch_array($validate);
-    session_start();
-    $_SESSION['active'] = true;
-    $_SESSION['idUser'] = $data['id'];
-    $_SESSION['name'] = $data['name'];
-    $_SESSION['email'] = $data['email'];
-    $_SESSION['user'] = $data['user'];
-    $_SESSION['rol'] = $data['rol'];
-
-    header("location: ../index.php");
-  } else {
-    header("location: ../index.html?error=login");
+  if ($result && $user = mysqli_fetch_assoc($result)) {
+    // Verifica la contraseña utilizando password_verify
+    if (password_verify($password, $user['contrasenia'])) {
+      // La contraseña es válida
+      session_start();
+      $_SESSION['user_id'] = $user['id']; // Suponiendo que 'id' es la columna que contiene el ID del usuario
+      header("location: ../index.html");
+      exit();
+    }
   }
+
+  // Si no se encontró el usuario o la contraseña no coincide
+  echo '
+    <script>
+      alert("Usuario no encontrado o la contraseña es incorrecta, inténtalo de nuevo");
+      window.location = "../index.html";
+    </script>
+  ';
+
+  mysqli_close($connect);
 ?>
