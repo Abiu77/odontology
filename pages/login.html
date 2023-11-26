@@ -11,20 +11,20 @@
 </head>
 
 <body>
-  <form action="" class="card">
+  <form action="../auth/login.php" method="POST" class="card">
     <h1 class="card-title">Iniciar sesión</h1>
     <div class="card-main">
       <label for="">
-        <input class="credentials" type="email" placeholder="Correo electronico">
+        <input class="credentials" type="email" placeholder="Correo electronico" name="email">
       </label>
       <label for="">
-        <input class="credentials" type="password" placeholder="Contraseña">
+        <input class="credentials" type="password" placeholder="Contraseña" name="password">
       </label>
-      <a class="login-btn" href="">Iniciar sesión</a>
+      <input type="submit" class="login-btn" value="Iniciar sesión">
     </div>
     <div class="card-footer">
       <p class="forgot-password">¿Has olvidado tu contraseña?</p>
-      <a class="create-account" href="">Crear cuenta nueva</a>
+      <a class="create-account" href="./singup.html">Crear cuenta nueva</a>
     </div>
   </form>
 </body>
