@@ -1,6 +1,7 @@
-.card-login {
+.card {
   display: flex;
   width: 420px;
+  height: auto;
   padding: 30px 20px;
   flex-direction: column;
   align-items: center;
@@ -11,34 +12,62 @@
   box-shadow: 4px 4px 12px 4px rgba(0, 0, 0, 0.20);
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 7px;
-}
-
-a {
-  text-decoration: none;
-}
-
-.login {
-  width: 100%;
-  padding: 10px;
-  border-radius: 7px;
+.card-title {
+  font-size: 28px;
   font-weight: bold;
+}
+
+.card-main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.card-main>label {
+  width: 100%;
+}
+
+.credentials {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid #DDDFE2;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.login-btn,
+.create-account {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 7px;
   background-color: #5E9EDF;
   color: #fff;
   text-align: center;
 }
 
-p {
+.card-footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.forgot-password {
+  font-size: 14px;
+  font-weight: 400;
   color: #5E9EDF;
 }
 
-.crear {
+.create-account {
   width: 60%;
   padding: 10px;
   border-radius: 7px;
+  font-size: 16px;
   font-weight: bold;
   background-color: #42B72A;
   color: #fff;
