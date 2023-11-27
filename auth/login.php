@@ -14,7 +14,7 @@
 
   // Verifica si existe la variable de sesión para los intentos fallidos
   if (!isset($_SESSION['intentosFallidos'])) {
-      $_SESSION['intentosFallidos'] = 0;
+    $_SESSION['intentosFallidos'] = 0;
   }
 
   // SQL INJECTION:
