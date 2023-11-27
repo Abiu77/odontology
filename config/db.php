@@ -1,15 +1,15 @@
 <?php
-  // Configuración de la base de datos
-  $host = "localhost";
-  $username = "root";
-  $password = "";
-  $database = "erp_odonto";
+// Configuración de la base de datos
+$host = "localhost";
+$username = "root";
+$password = "changeme";
+$database = "erp_odonto";
 
-  // Intenta establecer una conexión a la base de datos
-  $connect = new mysqli($host, $username, $password, $database);
+// Intenta establecer una conexión a la base de datos
+$connect = new mysqli($host, $username, $password, $database);
 
-  // Verifica la conexión
-  if ($connect->connect_error) {
-    die("Error de conexión a la base de datos: " . $connect->connect_error);
-  }
+// Verifica la conexión
+if ($connect->connect_error) {
+  die("Error de conexión a la base de datos: " . $connect->connect_error);
+}
 ?>
