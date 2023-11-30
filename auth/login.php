@@ -10,7 +10,7 @@ $email = $_POST['correo'];
 $password = $_POST['contrasenia'];
 
 // Definir el máximo de intentos fallidos permitidos antes de bloquear la cuenta
-$maxIntentosFallidos = 3;
+$maxIntentosFallidos = 5;
 
 // Verifica si existe la variable de sesión para los intentos fallidos
 if (!isset($_SESSION['intentosFallidos'])) {
@@ -51,6 +51,7 @@ if ($stmt) {
       header('Location: ../pages/dashboard.html');
       exit;
     } else {
+      // XSS:
       // Contraseña no válida, incrementa el contador de intentos fallidos
       $_SESSION['intentosFallidos']++;
 
