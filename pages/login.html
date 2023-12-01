@@ -16,11 +16,13 @@
     <form action="../auth/login.php" method="POST" class="card">
       <h1 class="card-title">Iniciar sesión</h1>
       <div class="card-main">
-        <label for="">
-          <input class="credentials" type="email" placeholder="Correo electronico" name="correo" required>
+        <label class="label-credentials" for="email">
+          <span>Correo electronico:</span>
+          <input class="credentials" type="email" placeholder="juancasas@gmail.com" name="correo" required>
         </label>
-        <label for="">
-          <input class="credentials" type="password" placeholder="Contraseña" name="contrasenia" required>
+        <label class="label-credentials" for="password">
+          <span>Contraseña:</span>
+          <input class="credentials" type="password" placeholder="------" name="contrasenia" required>
         </label>
         <input type="submit" class="login-btn" value="Iniciar sesión">
       </div>

@@ -13,7 +13,7 @@
 }
 
 .card-title {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
 }
 
@@ -29,22 +29,35 @@
   width: 100%;
 }
 
+.label-credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label-credentials>span {
+  font-size: 16px;
+  color: #0061EB;
+}
+
 .credentials {
   width: 100%;
   padding: 14px 20px;
-  border: 1px solid #DDDFE2;
+  border: 1px solid #8794B0;
   border-radius: 6px;
   font-size: 16px;
+  color: #000000;
 }
 
 .login-btn,
 .create-account {
   width: 100%;
   padding: 14px 20px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 7px;
-  background-color: #5E9EDF;
+  border: 1px solid #0061EB;
+  background-color: #0061EB;
   color: #fff;
   text-align: center;
 }
@@ -58,7 +71,7 @@
 }
 
 .forgot-password {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #5E9EDF;
 }
@@ -69,7 +82,7 @@
   border-radius: 7px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #42B72A;
+  background-color: #0061EB;
   color: #fff;
   text-align: center;
 }
