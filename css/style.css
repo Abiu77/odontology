@@ -76,7 +76,8 @@
   color: #5E9EDF;
 }
 
-.create-account {
+.create-account,
+.logout-btn {
   width: 60%;
   padding: 10px;
   border-radius: 7px;
