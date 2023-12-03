@@ -10,7 +10,7 @@ $email = $_POST['correo'];
 $password = $_POST['contrasenia'];
 
 // Definir el máximo de intentos fallidos permitidos antes de bloquear la cuenta
-$maxIntentosFallidos = 5;
+$maxIntentosFallidos = 1;
 
 // Verifica si existe la variable de sesión para los intentos fallidos
 if (!isset($_SESSION['intentosFallidos'])) {
@@ -58,14 +58,26 @@ if ($stmt) {
       // Verifica si se ha alcanzado el límite de intentos fallidos
       if ($_SESSION['intentosFallidos'] >= $maxIntentosFallidos) {
         // Puedes tomar medidas adicionales aquí, como bloquear la cuenta o registrar la actividad sospechosa
-        $message = "Demasiados intentos fallidos. Su cuenta ha sido bloqueada por seguridad.";
+        $message = "Demasiados intentos fallidos. Su cuenta ha sido bloqueada, comuniquese con el asistente de soporte.";
         echo '
           <script>
             alert("' . htmlspecialchars($message, ENT_QUOTES, 'UTF-8') . '");
             window.location = "../index.html";
           </script>
         ';
-        exit;
+        // Desactiva el usuario si se alcanza el límite de intentos fallidos
+        $Query = "UPDATE erpo_usersistema SET estado = '0' AND correo = ?";
+        $stmt = mysqli_prepare($connect, $Query);
+      if ($stmt) {
+        mysqli_stmt_bind_param($stmt, "s", $email);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+      } else {
+          die("Error en la preparación de la consulta: " . mysqli_error($connect));
+      }
+
+      mysqli_close($connect);
+      exit;
       }
 
       // Contraseña no válida, maneja la situación según tus necesidades
