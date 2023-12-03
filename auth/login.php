@@ -10,7 +10,7 @@ $email = $_POST['correo'];
 $password = $_POST['contrasenia'];
 
 // Definir el máximo de intentos fallidos permitidos antes de bloquear la cuenta
-$maxIntentosFallidos = 1;
+$maxIntentosFallidos = 5;
 
 // Verifica si existe la variable de sesión para los intentos fallidos
 if (!isset($_SESSION['intentosFallidos'])) {
@@ -96,7 +96,7 @@ if ($stmt) {
     echo '
       <script>
         alert("' . htmlspecialchars($message, ENT_QUOTES, 'UTF-8') . '");
-        window.location = "../index.html";
+        window.location = "../pages/login.html";
       </script>
     ';
     exit;
