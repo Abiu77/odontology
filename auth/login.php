@@ -66,7 +66,7 @@ if ($stmt) {
           </script>
         ';
         // Desactiva el usuario si se alcanza el límite de intentos fallidos
-        $Query = "UPDATE erpo_usersistema SET estado = '0' AND correo = ?";
+        $Query = "UPDATE erpo_usersistema SET estado='0' AND correo=?";
         $stmt = mysqli_prepare($connect, $Query);
       if ($stmt) {
         mysqli_stmt_bind_param($stmt, "s", $email);
