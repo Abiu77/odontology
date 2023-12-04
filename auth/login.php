@@ -73,11 +73,10 @@ if ($stmt) {
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
       } else {
-          die("Error en la preparación de la consulta: " . mysqli_error($connect));
+        die("Error en la preparación de la consulta: " . mysqli_error($connect));
       }
-
-      mysqli_close($connect);
-      exit;
+        mysqli_close($connect);
+        exit;
       }
 
       // Contraseña no válida, maneja la situación según tus necesidades
