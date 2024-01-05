@@ -49,8 +49,7 @@
   color: #000000;
 }
 
-.login-btn,
-.create-account {
+.login-btn {
   width: 100%;
   padding: 14px 20px;
   font-size: 16px;
@@ -65,9 +64,8 @@
 .card-footer {
   display: flex;
   width: 100%;
-  flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
 }
 
 .forgot-password {
@@ -76,7 +74,6 @@
   color: #5E9EDF;
 }
 
-.create-account,
 .logout-btn {
   width: 60%;
   padding: 10px;
@@ -86,4 +83,9 @@
   background-color: #0061EB;
   color: #fff;
   text-align: center;
+}
+
+.create-account {
+  text-decoration: underline;
+  color: #0061EB;
 }
