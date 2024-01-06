@@ -48,7 +48,7 @@ if ($stmt) {
       $_SESSION['usuario_nombre'] = $row['nombre'];
 
       // Redirige al dashboard u otra página después de iniciar sesión
-      header('Location: ../pages/dashboard.html');
+      header('Location: ../pages/dashboard.php');
       exit;
     } else {
       // XSS:
@@ -84,18 +84,18 @@ if ($stmt) {
       echo '
         <script>
            alert("' . htmlspecialchars($message, ENT_QUOTES, 'UTF-8') . '");
-          window.location = "../pages/login.html";
+          window.location = "../index.html";
         </script>
       ';
       exit;
     }
   } else {
     // El usuario no existe, maneja la situación según tus necesidades
-    $message = "El usuario no existe, por favor verifique los datos introducidos";
+    $message = "Por favor verifique los datos introducidos";
     echo '
       <script>
         alert("' . htmlspecialchars($message, ENT_QUOTES, 'UTF-8') . '");
-        window.location = "../pages/login.html";
+        window.location = "../index.html";
       </script>
     ';
     exit;

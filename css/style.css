@@ -75,7 +75,6 @@
 }
 
 .logout-btn {
-  width: 60%;
   padding: 10px;
   border-radius: 7px;
   font-size: 16px;
@@ -88,4 +87,44 @@
 .create-account {
   text-decoration: underline;
   color: #0061EB;
+}
+
+.menu-header {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #0061EB;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar>li,
+.navbar-submenu>li {
+  padding: 6px 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.list-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.list-navbar>ul {
+  display: none;
+  position: absolute;
+  top: 30px;
+}
+
+.list-navbar:hover>ul {
+  display: block;
 }
