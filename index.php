@@ -1,3 +1,8 @@
+<?php
+header("Location: pages/config.html");
+exit;
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
