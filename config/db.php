@@ -2,7 +2,7 @@
 // Configuración de la base de datos
 $host = "localhost";
 $username = "root";
-$password = "changeme";
+$password = "admin";
 $database = "erp_odonto";
 
 // Intenta establecer una conexión a la base de datos
