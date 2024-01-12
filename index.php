@@ -1,5 +1,5 @@
 <?php
-header("Location: pages/config.html");
+header("Location: pages/config.php");
 exit;
 ?>
 

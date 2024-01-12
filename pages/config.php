@@ -1,3 +1,7 @@
+<?php
+include '../config/db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,19 +56,48 @@
         <h3>Personal</h3>
         <div class="card-form card-section">
           <label class="label-credentials" for="">
+            <span>Pais</span>
+            <select name="select" class="credentials">
+            <?php 
+            $query="SELECT * FROM erp_odonto.erpo_pais";
+            $result = mysqli_query($connect, $query);
+            while($mostrar=mysqli_fetch_array($result)){
+            ?>
+              <option value="value1" selected><?php echo $mostrar['cmp_pais'] ?></option>
+            <?php
+            }
+            ?>
+            </select>
+          </label>
+          <label class="label-credentials" for="">
             <span>Provincia</span>
             <select name="select" class="credentials">
-              <option value="value1">Cusco</option>
-              <option value="value2" selected>Cajamarca</option>
-              <option value="value3">Arequipa</option>
+            <?php 
+            $query="SELECT * FROM erp_odonto.erpo_provincia";
+            $result = mysqli_query($connect, $query);
+
+            while($mostrar=mysqli_fetch_array($result)){
+            ?>
+              <option value="value1" selected><?php echo $mostrar['cmp_provincia'] ?></option>
+            <?php
+            }
+            ?>
             </select>
           </label>
           <label class="label-credentials" for="">
             <span>tipo de documento</span>
             <select name="select" class="credentials">
-              <option value="value1">Dni</option>
-              <option value="value2" selected>Passport</option>
-              <option value="value3">Ruc</option>
+              <?php 
+            $query="SELECT * FROM erp_odonto.erpo_tipodocidentidad";
+            $result = mysqli_query($connect, $query);
+
+            while($mostrar=mysqli_fetch_array($result)){
+            ?>
+              <option value="value1" selected><?php echo $mostrar['cmp_tipo_docidentidad'] ?></option>
+            <?php
+            }
+            ?>
+              
             </select>
           </label>
           <label class="label-credentials" for="">
