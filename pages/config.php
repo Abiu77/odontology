@@ -51,7 +51,6 @@ include '../config/db.php';
           </label>
         </div>
       </section>
-
       <section>
         <h3>Personal</h3>
         <div class="card-form card-section">
@@ -61,10 +60,11 @@ include '../config/db.php';
             <?php 
             $query="SELECT * FROM erp_odonto.erpo_pais";
             $result = mysqli_query($connect, $query);
+
             while($mostrar=mysqli_fetch_array($result)){
-            ?>
-              <option value="value1" selected><?php echo $mostrar['cmp_pais'] ?></option>
-            <?php
+              ?>
+                <option value="value1" selected><?php echo $mostrar['cmp_pais'] ?></option>
+              <?php
             }
             ?>
             </select>
@@ -77,9 +77,9 @@ include '../config/db.php';
             $result = mysqli_query($connect, $query);
 
             while($mostrar=mysqli_fetch_array($result)){
-            ?>
-              <option value="value1" selected><?php echo $mostrar['cmp_provincia'] ?></option>
-            <?php
+              ?>
+                <option value="value1" selected><?php echo $mostrar['cmp_provincia'] ?></option>
+              <?php
             }
             ?>
             </select>
@@ -87,17 +87,16 @@ include '../config/db.php';
           <label class="label-credentials" for="">
             <span>tipo de documento</span>
             <select name="select" class="credentials">
-              <?php 
+            <?php 
             $query="SELECT * FROM erp_odonto.erpo_tipodocidentidad";
             $result = mysqli_query($connect, $query);
 
             while($mostrar=mysqli_fetch_array($result)){
-            ?>
-              <option value="value1" selected><?php echo $mostrar['cmp_tipo_docidentidad'] ?></option>
-            <?php
+              ?>
+                <option value="value1" selected><?php echo $mostrar['cmp_tipo_docidentidad'] ?></option>
+              <?php
             }
             ?>
-              
             </select>
           </label>
           <label class="label-credentials" for="">
