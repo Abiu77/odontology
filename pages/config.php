@@ -26,9 +26,9 @@ include '../config/db.php';
               $query="SELECT * FROM erpo_tipodocidentidad";
               $result = mysqli_query($connect, $query);
 
-              while($mostrar=mysqli_fetch_array($result)){
+              while($show=mysqli_fetch_array($result)){
                 ?>
-                  <option value="value1" selected><?php echo $mostrar['cmp_tipo_docidentidad'] ?></option>
+                  <option value="value1" selected><?php echo $show['cmp_tipo_docidentidad'] ?></option>
                 <?php
               }
               ?>
@@ -68,9 +68,9 @@ include '../config/db.php';
             $query="SELECT * FROM erp_odonto.erpo_pais";
             $result = mysqli_query($connect, $query);
 
-            while($mostrar=mysqli_fetch_array($result)){
+            while($show=mysqli_fetch_array($result)){
               ?>
-                <option value="value1" selected><?php echo $mostrar['cmp_pais'] ?></option>
+                <option value="value1" selected><?php echo $show['cmp_pais'] ?></option>
               <?php
             }
             ?>
@@ -83,9 +83,9 @@ include '../config/db.php';
             $query="SELECT * FROM erp_odonto.erpo_provincia";
             $result = mysqli_query($connect, $query);
 
-            while($mostrar=mysqli_fetch_array($result)){
+            while($show=mysqli_fetch_array($result)){
               ?>
-                <option value="value1" selected><?php echo $mostrar['cmp_provincia'] ?></option>
+                <option value="value1" selected><?php echo $show['cmp_provincia'] ?></option>
               <?php
             }
             ?>
@@ -98,9 +98,9 @@ include '../config/db.php';
             $query="SELECT * FROM erp_odonto.erpo_tipodocidentidad";
             $result = mysqli_query($connect, $query);
 
-            while($mostrar=mysqli_fetch_array($result)){
+            while($show=mysqli_fetch_array($result)){
               ?>
-                <option value="value1" selected><?php echo $mostrar['cmp_tipo_docidentidad'] ?></option>
+                <option value="value1" selected><?php echo $show['cmp_tipo_docidentidad'] ?></option>
               <?php
             }
             ?>
