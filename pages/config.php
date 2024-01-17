@@ -22,9 +22,16 @@ include '../config/db.php';
           <label class="label-credentials" for="">
             <span>tipo de documento</span>
             <select name="select" class="credentials">
-              <option value="value1">Dni</option>
-              <option value="value2" selected>Passport</option>
-              <option value="value3">Ruc</option>
+              <?php 
+              $query="SELECT * FROM erpo_tipodocidentidad";
+              $result = mysqli_query($connect, $query);
+
+              while($mostrar=mysqli_fetch_array($result)){
+                ?>
+                  <option value="value1" selected><?php echo $mostrar['cmp_tipo_docidentidad'] ?></option>
+                <?php
+              }
+              ?>
             </select>
           </label>
           <label class="label-credentials" for="">
