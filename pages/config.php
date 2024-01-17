@@ -65,7 +65,7 @@ include '../config/db.php';
             <span>Pais</span>
             <select name="select" class="credentials">
             <?php 
-            $query="SELECT * FROM erp_odonto.erpo_pais";
+            $query="SELECT * FROM erpo_pais";
             $result = mysqli_query($connect, $query);
 
             while($show=mysqli_fetch_array($result)){
@@ -80,7 +80,7 @@ include '../config/db.php';
             <span>Provincia</span>
             <select name="select" class="credentials">
             <?php 
-            $query="SELECT * FROM erp_odonto.erpo_provincia";
+            $query="SELECT * FROM erpo_provincia";
             $result = mysqli_query($connect, $query);
 
             while($show=mysqli_fetch_array($result)){
@@ -95,7 +95,7 @@ include '../config/db.php';
             <span>tipo de documento</span>
             <select name="select" class="credentials">
             <?php 
-            $query="SELECT * FROM erp_odonto.erpo_tipodocidentidad";
+            $query="SELECT * FROM erpo_tipodocidentidad";
             $result = mysqli_query($connect, $query);
 
             while($show=mysqli_fetch_array($result)){
