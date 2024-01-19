@@ -79,8 +79,8 @@ include '../config/db.php';
           <label class="label-credentials" for="">
             <span>Provincia</span>
             <select name="select" class="credentials">
-            <?php 
-            $query="SELECT * FROM erpo_provincia";
+            <?php
+            $query="SELECT DISTINCT cmp_provincia FROM erpo_provincia";
             $result = mysqli_query($connect, $query);
 
             while($show=mysqli_fetch_array($result)){
