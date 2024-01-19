@@ -1,17 +1,22 @@
 * {
+  min-width: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 html {
   font-family: "Geist Sans";
   color-scheme: light;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 }
 
 body {
+  margin: 0;
+  min-height: 100dvh;
   width: 100%;
   margin: 0px auto;
   display: flex;
@@ -42,4 +47,17 @@ a {
 
 li {
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
