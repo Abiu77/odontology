@@ -20,7 +20,7 @@ include '../config/db.php';
         <h3>Empresa</h3>
         <div class="card-form card-section">
           <label class="label-credentials" for="">
-            <span>tipo de documento</span>
+            <span>Tipo de documento</span>
             <select name="select" class="credentials">
               <?php 
               $query="SELECT * FROM erpo_tipodocidentidad";
