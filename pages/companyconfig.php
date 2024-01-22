@@ -19,8 +19,8 @@ include '../config/db.php';
       <section>
         <h3 class="card-title">Empresa</h3>
         <div class="card-form card-section">
-          <label class="label-credentials" for="">
-            <span>Tipo de documento</span>
+          <label class="label-credentials" for="document-type">
+            <span>Tipo de Documento</span>
             <select name="select" class="credentials">
               <?php 
               $query="SELECT * FROM erpo_tipodocidentidad";
@@ -34,27 +34,25 @@ include '../config/db.php';
               ?>
             </select>
           </label>
-          <label class="label-credentials" for="">
-            <span>Razon Social</span>
+          <label class="label-credentials" for="business-name">
+            <span>Razón Social</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="address">
             <span>Dirección</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
-            <span>Telefono</span>
+          <label class="label-credentials" for="phone">
+            <span>Teléfono</span>
             <input class="credentials" type="text" required>
           </label>
           <label class="label-credentials" for="email">
             <span>Email</span>
             <input class="credentials" type="email" required>
           </label>
-          <label class="label-credentials" for="">
-            <span>logo</span>
-            <div class="credentials">
-              <input type="file" name="imagen" id="enviar">
-            </div>
+          <label class="label-credentials" for="logo">
+            <span>Logo</span>
+            <input  class="credentials" type="file" name="imagen" id="enviar" accept=".jpg, .jpeg, .png" >
           </label>
         </div>
       </section>

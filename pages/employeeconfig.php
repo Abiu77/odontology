@@ -19,8 +19,8 @@ include '../config/db.php';
       <section>
         <h3 class="card-title">Personal</h3>
         <div class="card-form card-section">
-          <label class="label-credentials" for="">
-            <span>Pais</span>
+          <label class="label-credentials" for="country">
+            <span>País</span>
             <select name="select" class="credentials">
             <?php 
             $query="SELECT * FROM erpo_pais";
@@ -34,7 +34,7 @@ include '../config/db.php';
             ?>
             </select>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="province">
             <span>Provincia</span>
             <select name="select" class="credentials">
             <?php
@@ -49,7 +49,7 @@ include '../config/db.php';
             ?>
             </select>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="document-type">
             <span>tipo de documento</span>
             <select name="select" class="credentials">
             <?php 
@@ -64,47 +64,43 @@ include '../config/db.php';
             ?>
             </select>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="name">
             <span>Nombre</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="last-name">
             <span>Apellido</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="birthdate">
             <span>Fecha nacimiento</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="landline">
             <span>Telefono fijo</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="mobile-phone">
             <span>Telefono movil</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
-            <span>Telefono fijo</span>
-            <input class="credentials" type="text" required>
-          </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="family-phone">
             <span>Telefono familiar</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="family-description">
             <span>Descripcion familiar</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="email">
             <span>Email</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
-            <span>Area</span>
+          <label class="label-credentials" for="area">
+            <span>Área</span>
             <input class="credentials" type="text" required>
           </label>
-          <label class="label-credentials" for="">
+          <label class="label-credentials" for="position">
             <span>Cargo</span>
             <input class="credentials" type="text" required>
           </label>
