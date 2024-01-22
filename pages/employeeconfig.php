@@ -17,49 +17,7 @@ include '../config/db.php';
   <main>
     <form action="" method="POST" class="card card-config">
       <section>
-        <h3>Empresa</h3>
-        <div class="card-form card-section">
-          <label class="label-credentials" for="">
-            <span>Tipo de documento</span>
-            <select name="select" class="credentials">
-              <?php 
-              $query="SELECT * FROM erpo_tipodocidentidad";
-              $result = mysqli_query($connect, $query);
-
-              while($show=mysqli_fetch_array($result)){
-                ?>
-                  <option value="value1" selected><?php echo $show['cmp_tipo_docidentidad'] ?></option>
-                <?php
-              }
-              ?>
-            </select>
-          </label>
-          <label class="label-credentials" for="">
-            <span>Razon Social</span>
-            <input class="credentials" type="text" required>
-          </label>
-          <label class="label-credentials" for="">
-            <span>Dirección</span>
-            <input class="credentials" type="text" required>
-          </label>
-          <label class="label-credentials" for="">
-            <span>Telefono</span>
-            <input class="credentials" type="text" required>
-          </label>
-          <label class="label-credentials" for="email">
-            <span>Email</span>
-            <input class="credentials" type="email" required>
-          </label>
-          <label class="label-credentials" for="">
-            <span>logo</span>
-            <div class="credentials">
-              <input type="file" name="imagen" id="enviar">
-            </div>
-          </label>
-        </div>
-      </section>
-      <section>
-        <h3>Personal</h3>
+        <h3 class="card-title">Personal</h3>
         <div class="card-form card-section">
           <label class="label-credentials" for="">
             <span>Pais</span>
