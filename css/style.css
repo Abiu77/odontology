@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  width: 420px;
+  min-width: 420px;
   height: auto;
   padding: 30px 20px;
   flex-direction: column;
@@ -131,15 +131,10 @@
 
 .card-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 260px);
   gap: 15px;
 }
 
-.card-config {
-  width: 750px;
-  margin-top: 90px;
-}
-
-.card-config h3 {
+.card-title {
   margin: 0 0 20px 0;
 }
