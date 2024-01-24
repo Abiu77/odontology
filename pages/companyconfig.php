@@ -15,7 +15,7 @@ include '../config/db.php';
 </head>
 <body>
   <main>
-    <form action="" method="POST" class="card card-config">
+    <form action="" method="POST" class="card">
       <section>
         <h3 class="card-title">Empresa</h3>
         <div class="card-form card-section">
@@ -36,23 +36,23 @@ include '../config/db.php';
           </label>
           <label class="label-credentials" for="business-name">
             <span>Razón Social</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="business" required>
           </label>
           <label class="label-credentials" for="address">
             <span>Dirección</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="address" required>
           </label>
           <label class="label-credentials" for="phone">
             <span>Teléfono</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="phone" required>
           </label>
           <label class="label-credentials" for="email">
             <span>Email</span>
-            <input class="credentials" type="email" required>
+            <input class="credentials" type="email" name="email" required>
           </label>
           <label class="label-credentials" for="logo">
             <span>Logo</span>
-            <input  class="credentials" type="file" name="imagen" id="enviar" accept=".jpg, .jpeg, .png" >
+            <input  class="credentials" type="file" name="logo" id="enviar" accept=".jpg, .jpeg, .png" >
           </label>
         </div>
       </section>
