@@ -6,14 +6,14 @@ $name = $_POST['nombre'];
 $lastname = $_POST['apellido'];
 $username = $_POST['username'];
 $email = $_POST['correo'];
-$password = $_POST['contrasenia'];
+$password = $_POST['pass'];
 
 // Genera un hash seguro de la contraseña
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT); 
 
 // SQL INJECTION:
 // Preparar la consulta con una consulta preparada
-$query = "INSERT INTO erpo_usersistema (nombre, apellido, username, correo, contrasenia, fingerprint) VALUES (?, ?, ?, ?, ?, '')";
+$query = "INSERT INTO erpo_usersistema (camp_nombre, apellido, username, correo, pass, fingerprint) VALUES (?, ?, ?, ?, ?, '')";
 $stmt = mysqli_prepare($connect, $query);
 
 // Verificar si la preparación fue exitosa

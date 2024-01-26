@@ -6,7 +6,7 @@ session_start();
 include '../config/db.php';
 
 // Recibe datos del formulario
-$email = $_POST['correo'];
+$username = $_POST['username'];
 $password = $_POST['contrasenia'];
 
 // Definir el máximo de intentos fallidos permitidos antes de bloquear la cuenta
@@ -19,13 +19,13 @@ if (!isset($_SESSION['intentosFallidos'])) {
 
 // SQL INJECTION:
 // Preparar la consulta con una consulta preparada
-$query = "SELECT * FROM erpo_usersistema WHERE correo=?";
+$query = "SELECT * FROM erpo_usersistema WHERE cmp_username=?";
 $stmt = mysqli_prepare($connect, $query);
 
 // Verificar si la preparación fue exitosa
 if ($stmt) {
   // Vincular los parámetros
-  mysqli_stmt_bind_param($stmt, "s", $email);
+  mysqli_stmt_bind_param($stmt, "s", $username);
 
   // Ejecutar la consulta
   mysqli_stmt_execute($stmt);
@@ -39,7 +39,7 @@ if ($stmt) {
   // Verificar si el usuario existe
   if ($result && $row = mysqli_fetch_assoc($result)) {
     // Verifica la contraseña utilizando password_verify
-    if (password_verify($password, $row['contrasenia'])) {
+    if (password_verify($password, $row['cmp_pass'])) {
       // Contraseña válida, reinicia el contador de intentos fallidos
       $_SESSION['intentosFallidos'] = 0;
 
