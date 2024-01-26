@@ -15,7 +15,7 @@ include '../config/db.php';
 </head>
 <body>
   <main>
-    <form action="" method="POST" class="card">
+    <form action="../auth/employee/config.php" method="POST" class="card">
       <section>
         <h3 class="card-title">Personal</h3>
         <div class="card-form card-section">
