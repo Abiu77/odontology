@@ -59,6 +59,5 @@ include '../config/db.php';
       <input type="submit" class="login-btn" value="Enviar">
     </form>
   </main>
-
 </body>
 </html>
