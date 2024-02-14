@@ -52,7 +52,7 @@ include '../config/db.php';
           </label>
           <label class="label-credentials" for="logo">
             <span>Logo</span>
-            <input  class="credentials" type="file" name="logo" id="enviar" accept=".jpg, .jpeg, .png" >
+            <input  class="credentials" type="file" name="logo" id="enviar" accept=".jpg, .jpeg, .png, .webp" >
           </label>
         </div>
       </section>
