@@ -33,7 +33,7 @@ if ($execute) {
   // XSS:
   // Utilizar htmlspecialchars para evitar ataques XSS
   $message = htmlspecialchars("Se ha registrado correctamente");
-  echo ' 
+  echo '
     <script>
       alert("' . htmlspecialchars($message, ENT_QUOTES, 'UTF-8') . '");
       window.location = "../../employeeconfig.php";

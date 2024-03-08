@@ -19,7 +19,7 @@ include '../config/db.php';
       <section>
         <h3 class="card-title">Empresa</h3>
         <div class="card-form card-section">
-          <label class="label-credentials" for="document-type">
+          <label class="label-credentials" for="id_tipodocidentidad">
             <span>Tipo de Documento</span>
             <select name="select" class="credentials">
               <?php 
