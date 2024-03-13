@@ -26,9 +26,9 @@ include '../config/db.php';
               $query="SELECT * FROM erpo_tipodocidentidad";
               $result = mysqli_query($connect, $query);
 
-              while($show=mysqli_fetch_array($result)){
+              while($show=mysqli_fetch_array($result)) {
                 ?>
-                  <option value="value1" selected><?php echo $show['cmp_tipo_docidentidad'] ?></option>
+                  <option value="<?php echo $show['id']; ?>" selected><?php echo $show['cmp_tipo_docidentidad'] ?></option>
                 <?php
               }
               ?>
