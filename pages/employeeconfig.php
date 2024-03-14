@@ -21,14 +21,14 @@ include '../config/db.php';
         <div class="card-form card-section">
           <label class="label-credentials" for="country">
             <span>País</span>
-            <select name="select" class="credentials">
+            <select name="country" class="credentials">
             <?php 
             $query="SELECT * FROM erpo_pais";
             $result = mysqli_query($connect, $query);
 
             while($show=mysqli_fetch_array($result)){
               ?>
-                <option value="value1" selected><?php echo $show['cmp_pais'] ?></option>
+                <option value="<?php echo $show['id']; ?>" selected><?php echo $show['cmp_pais'] ?></option>
               <?php
             }
             ?>
@@ -36,14 +36,14 @@ include '../config/db.php';
           </label>
           <label class="label-credentials" for="province">
             <span>Provincia</span>
-            <select name="select" class="credentials">
+            <select name="province" class="credentials">
             <?php
             $query="SELECT DISTINCT cmp_provincia FROM erpo_provincia";
             $result = mysqli_query($connect, $query);
 
             while($show=mysqli_fetch_array($result)){
               ?>
-                <option value="value1" selected><?php echo $show['cmp_provincia'] ?></option>
+                <option value="<?php echo $show['id']; ?>" selected><?php echo $show['cmp_provincia'] ?></option>
               <?php
             }
             ?>
@@ -51,14 +51,14 @@ include '../config/db.php';
           </label>
           <label class="label-credentials" for="document-type">
             <span>tipo de documento</span>
-            <select name="select" class="credentials">
+            <select name="docidentity" class="credentials">
             <?php 
             $query="SELECT * FROM erpo_tipodocidentidad";
             $result = mysqli_query($connect, $query);
 
             while($show=mysqli_fetch_array($result)){
               ?>
-                <option value="value1" selected><?php echo $show['cmp_tipo_docidentidad'] ?></option>
+                <option value="<?php echo $show['id']; ?>" selected><?php echo $show['cmp_tipo_docidentidad'] ?></option>
               <?php
             }
             ?>
@@ -109,6 +109,5 @@ include '../config/db.php';
       <input type="submit" class="login-btn" value="Enviar">
     </form>
   </main>
-
 </body>
 </html>
