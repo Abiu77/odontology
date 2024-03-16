@@ -43,7 +43,7 @@ include '../config/db.php';
 
             while($show=mysqli_fetch_array($result)){
               ?>
-                <option value="<?php echo $show['id']; ?>" selected><?php echo $show['cmp_provincia'] ?></option>
+                <option value="<?php echo $show['cmp_provincia']; ?>" selected><?php echo $show['cmp_provincia'] ?></option>
               <?php
             }
             ?>
