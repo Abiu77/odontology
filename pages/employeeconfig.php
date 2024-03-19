@@ -74,7 +74,7 @@ include '../config/db.php';
           </label>
           <label class="label-credentials" for="birthdate">
             <span>Fecha nacimiento</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="date" required>
           </label>
           <label class="label-credentials" for="landline">
             <span>Telefono fijo</span>
