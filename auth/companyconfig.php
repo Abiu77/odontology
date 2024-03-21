@@ -2,11 +2,10 @@
  include '../config/db.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtiene los datos del formulario
-    $tipo_documento = $_POST['select'];
-    $razon_social = $_POST['business'];
-    $direccion = $_POST['address'];
-    $telefono = $_POST['phone'];
+    $document_type = $_POST['document_type'];
+    $business = $_POST['business'];
+    $address = $_POST['address'];
+    $phone = $_POST['phone'];
     $email = $_POST['email'];
    /*  $logo_temp = $_FILES['logo']['tmp_name'];
     $logo_path = "ruta_de_guardado_en_servidor/" . $_FILES['logo']['name'];
@@ -14,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $query = "INSERT INTO erpo_empresa (id_tipodocidentidad, cmp_razonsocial, cmp_direccion, cmp_telefono, cmp_email) VALUES (?, ?, ?, ?, ?)";
     $statement = $connect->prepare($query);
-    $statement->bind_param("sssss", $tipo_documento, $razon_social, $direccion, $telefono, $email);
+    $statement->bind_param("sssss", $document_type, $business, $address, $phone, $email);
 
     if ($statement->execute()) {
         echo "Los datos se han insertado correctamente.";

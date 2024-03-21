@@ -21,7 +21,7 @@ include '../config/db.php';
         <div class="card-form card-section">
           <label class="label-credentials" for="id_tipodocidentidad">
             <span>Tipo de Documento</span>
-            <select name="select" class="credentials">
+            <select name="document_type" class="credentials">
               <?php 
               $query="SELECT * FROM erpo_tipodocidentidad";
               $result = mysqli_query($connect, $query);
@@ -34,7 +34,7 @@ include '../config/db.php';
               ?>
             </select>
           </label>
-          <label class="label-credentials" for="business-name">
+          <label class="label-credentials" for="business">
             <span>Razón Social</span>
             <input class="credentials" type="text" name="business" required>
           </label>
