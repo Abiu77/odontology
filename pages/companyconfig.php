@@ -15,6 +15,7 @@ include '../config/db.php';
 </head>
 <body>
   <main>
+    <h1>Proceso de configuración sistena ERPO_ODONTO</h1>
     <form action="../auth/companyconfig.php" method="POST" class="card">
       <section>
         <h3 class="card-title">Empresa</h3>
