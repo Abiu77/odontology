@@ -1,6 +1,4 @@
 .card {
-  display: flex;
-  min-width: 420px;
   height: auto;
   padding: 30px 20px;
   flex-direction: column;
@@ -50,6 +48,7 @@
 }
 
 .login-btn {
+  margin-top: 20px;
   width: 100%;
   padding: 14px 20px;
   font-size: 16px;
@@ -75,6 +74,7 @@
 }
 
 .logout-btn {
+  margin-top: 20px;
   padding: 10px;
   border-radius: 7px;
   font-size: 16px;
@@ -130,8 +130,9 @@
 }
 
 .card-section {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 260px);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 15px;
 }
 
