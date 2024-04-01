@@ -77,6 +77,7 @@ CREATE TABLE IF NOT EXISTS erp_odonto.erpo_paciente (
   cmp_docidentidad VARCHAR(50) COMMENT 'dni: 2020344576, ruc: 10..., 20..., ',
   cmp_nombre VARCHAR(200),
   cmp_apellido VARCHAR(250),
+  cmp_fechanacimiento DATE NOT NULL;
   cmp_direccion VARCHAR(50) NOT NULL,
   cmp_telefono VARCHAR(15),
   cmp_email VARCHAR(255),
