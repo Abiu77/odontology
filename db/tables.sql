@@ -292,16 +292,18 @@ CREATE TABLE IF NOT EXISTS erp_odonto.erpo_rol (
   cmp_e BINARY(1) DEFAULT '1' COMMENT 'ESTADO 1:active 0:down'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='ROL';
 
--- Tabla imgenes dentales
+-- Tabla imagenes dentales
 CREATE TABLE IF NOT EXISTS erp_odonto.erpo_imgdentales (
   id INT NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
   id_imgdentales VARCHAR(20) NOT NULL UNIQUE COMMENT 'Codigo generado por trigger',
   id_paciente INT,
+  id_cita INT,
   cmp_fecha_img DATE NOT NULL,
   cmp_tipo_img VARCHAR(30) NOT NULL COMMENT 'Radiografia, imagen dental, fotografia intraoral',
   cmp_imagen LONGBLOB NOT NULL COMMENT 'Imagenes',
   cmp_e BINARY(1) DEFAULT '1' COMMENT 'ESTADO 1:active 0:down',
-  FOREIGN KEY (id_paciente) REFERENCES erpo_paciente(id)
+  FOREIGN KEY (id_paciente) REFERENCES erpo_paciente(id),
+  FOREIGN KEY (id_cita) REFERENCES erpo_cita(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='IMAGENES DENTALES';
 
 -- Tabla usuario de sistema
