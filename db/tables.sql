@@ -127,6 +127,8 @@ CREATE TABLE IF NOT EXISTS erp_odonto.erpo_producto (
   cmp_nombre VARCHAR(30) NOT NULL,
   cmp_descripcion TEXT NOT NULL,
   cmp_precio INT NOT NULL,
+  cmp_pc DECIMAL(19, 4) NOT NULL COMMENT 'Precio de compra',
+  cmp_pv DECIMAL(19, 4) NOT NULL COMMENT 'Precio de venta',
   cmp_e BINARY(1) DEFAULT '1' COMMENT 'ESTADO 1:active 0:down',
   FOREIGN KEY (id_umedida) REFERENCES erpo_umedida(id),
   FOREIGN KEY (id_proveedor) REFERENCES erpo_proveedor(id)
