@@ -1,0 +1,17 @@
+ @media (min-width: 640px) {
+   .title-form {
+     font-size: 30px;
+   }
+ }
+
+ @media (min-width: 768px) {
+   .title-form {
+     font-size: 40px;
+   }
+ }
+
+ @media (min-width: 1024px) {}
+
+ @media (min-width: 1280px) {}
+
+ @media (min-width: 1536px) {}
