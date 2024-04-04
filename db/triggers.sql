@@ -1,4 +1,4 @@
-USE erp_odonto;
+-- USE erp_odonto;
 
 -- Trigger para la tabla erpo_pais
 DELIMITER |
