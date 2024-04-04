@@ -1,4 +1,4 @@
-USE erp_odonto;
+-- USE erp_odonto;
 
 -- Tabla pais
 CREATE TABLE IF NOT EXISTS erp_odonto.erpo_pais (
@@ -39,8 +39,8 @@ CREATE TABLE IF NOT EXISTS erp_odonto.erpo_empresa (
   id_tipodocidentidad INT,
   cmp_razonsocial VARCHAR(100) NOT NULL,
   cmp_direccion VARCHAR(30) NOT NULL,
-  cmp_telefono VARCHAR(15),
-  cmp_email VARCHAR(100),
+  cmp_telefono VARCHAR(15) NOT NULL,
+  cmp_email VARCHAR(100) NOT NULL,
   cmp_logo LONGBLOB NOT NULL COMMENT 'Logo en formato img',
   cmp_e BINARY(1) DEFAULT '1' COMMENT 'ESTADO 1:active 0:down',
   FOREIGN KEY (id_tipodocidentidad) REFERENCES erpo_tipodocidentidad(id)
@@ -53,11 +53,11 @@ CREATE TABLE IF NOT EXISTS erp_odonto.erpo_cliente (
   id_tipodocidentidad INT,
   id_pais INT,
   id_provincia INT,
-  cmp_telefono VARCHAR(15),
-  cmp_email VARCHAR(150),
-  cmp_docidentidad VARCHAR(50) COMMENT 'dni: 2020344576, ruc: 10..., 20..., ',
-  cmp_nombre VARCHAR(200),
-  cmp_apellido VARCHAR(50),
+  cmp_telefono VARCHAR(15) NOT NULL,
+  cmp_email VARCHAR(100) NOT NULL,
+  cmp_docidentidad VARCHAR(50) NOT NULL COMMENT 'dni: 2020344576, ruc: 10..., 20..., ',
+  cmp_nombre VARCHAR(200) NOT NULL,
+  cmp_apellido VARCHAR(50) NOT NULL,
   cmp_direccion VARCHAR(30) NOT NULL,
   cmp_tipo_cliente VARCHAR (100) NULL COMMENT 'persona natural, corporativo, asegurado, etc',
   cmp_e binary(1) DEFAULT '1' COMMENT 'ESTADO 1:active 0:down',
@@ -77,10 +77,10 @@ CREATE TABLE IF NOT EXISTS erp_odonto.erpo_paciente (
   cmp_docidentidad VARCHAR(50) NOT NULL COMMENT 'dni: 2020344576, ruc: 10..., 20..., ',
   cmp_nombre VARCHAR(200) NOT NULL,
   cmp_apellido VARCHAR(250) NOT NULL,
-  cmp_fechanacimiento DATE NOT NULL;
+  cmp_fechanacimiento DATE NOT NULL,
   cmp_direccion VARCHAR(50) NOT NULL,
-  cmp_telefono VARCHAR(15),
-  cmp_email VARCHAR(255),
+  cmp_telefono VARCHAR(15) NOT NULL,
+  cmp_email VARCHAR(255) NOT NULL,
   cmp_antecedentes_medicos TEXT,
   cmp_historial_dental TEXT,
   cmp_cliente binary(1) DEFAULT '0' COMMENT 'determinamos si el paciente es el cliente quien efectuara los pagos',
