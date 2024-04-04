@@ -11,11 +11,12 @@ include '../config/db.php';
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/font.css">
   <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/responsive.css">
   <link rel="shortcut icon" href="../assets/favicon.svg" type="image/x-icon">
 </head>
-<body>
+<body>                   
   <main>
-    <h1>Proceso de configuración sistena ERPO_ODONTO</h1>
+    <h1 class="title-form">Proceso de configuración sistena ERPO_ODONTO</h1>
     <form action="../auth/companyconfig.php" method="POST" class="card">
       <section>
         <h3 class="card-title">Empresa</h3>

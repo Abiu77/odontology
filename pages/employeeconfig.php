@@ -11,17 +11,19 @@ include '../config/db.php';
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/font.css">
   <link rel="stylesheet" href="../css/index.css">
+   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="shortcut icon" href="../assets/favicon.svg" type="image/x-icon">
 </head>
 <body>
   <main>
+     <h1 class="title-form">Proceso de configuración sistena ERPO_ODONTO</h1>
     <form action="../auth/employeeconfig.php" method="POST" class="card">
       <section>
         <h3 class="card-title">Personal</h3>
         <div class="card-form card-section">
           <label class="label-credentials" for="country">
             <span>País</span>
-            <select name="country" class="credentials">
+            <select name="country" class="credentials" onchange="funcion en javascrit">
             <?php 
             $query="SELECT * FROM erpo_pais";
             $result = mysqli_query($connect, $query);
