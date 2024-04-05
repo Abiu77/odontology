@@ -15,10 +15,10 @@ CREATE TABLE IF NOT EXISTS erp_odonto.erpo_pais (
 CREATE TABLE IF NOT EXISTS erp_odonto.erpo_provincia (
   id INT NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
   id_provincia VARCHAR(20) NOT NULL UNIQUE COMMENT 'Codigo generado por trigger',
-  cmp_codigo_postal VARCHAR(20) NOT NULL,
   cmp_provincia VARCHAR(50) NOT NULL,
   cmp_distrito VARCHAR(50) NOT NULL,
-  cmp_e BINARY(1) DEFAULT '1' COMMENT 'ESTADO 1:active 0:down',
+  cmp_codigopostal VARCHAR(20) NOT NULL,
+  cmp_e BINARY(1) DEFAULT '1' COMMENT 'ESTADO 1:active 0:down'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='PROVINCIA';
 
 -- Tabla documento de identidad
