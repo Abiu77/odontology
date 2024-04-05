@@ -1,5 +1,5 @@
 <?php
-header("Location: pages/companyconfig.php");
+header("Location: ./pages/companyconfig.php");
 exit;
 ?>
 
@@ -13,7 +13,7 @@ exit;
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
-</head>
+</head> 
 <body>
   <main>
     <form action="./auth/login.php" method="POST" class="card">
@@ -30,8 +30,8 @@ exit;
         <input type="submit" class="login-btn" value="Iniciar sesión">
       </div>
       <div class="card-footer">
-        <p class="forgot-password">¿Has olvidado tu contraseña?</p>
-        <a class="create-account" href="./pages/singup.html">Registrarse</a>
+        <p class="forgot-password">¿Puede registrar sus datos?</p>
+        <a class="create-account" href="./pages/companyconfig.php">Registrarse</a>
       </div>
     </form>
   </main>

@@ -40,20 +40,20 @@ include '../config/db.php';
             <span>Provincia</span>
             <select name="province" class="credentials">
             <?php
-            $query="SELECT DISTINCT cmp_provincia FROM erpo_provincia";
+            $query="SELECT * FROM erpo_provincia";
             $result = mysqli_query($connect, $query);
 
             while($show=mysqli_fetch_array($result)){
               ?>
-                <option value="<?php echo $show['cmp_provincia']; ?>" selected><?php echo $show['cmp_provincia'] ?></option>
+                <option value="<?php echo $show['id']; ?>" selected><?php echo $show['cmp_provincia'] ?></option>
               <?php
             }
             ?>
             </select>
           </label>
-          <label class="label-credentials" for="document-type">
+          <label class="label-credentials" for="document_type">
             <span>tipo de documento</span>
-            <select name="docidentity" class="credentials">
+            <select name="document_type" class="credentials">
             <?php 
             $query="SELECT * FROM erpo_tipodocidentidad";
             $result = mysqli_query($connect, $query);
@@ -68,43 +68,43 @@ include '../config/db.php';
           </label>
           <label class="label-credentials" for="name">
             <span>Nombre</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="name" required>
           </label>
-          <label class="label-credentials" for="last-name">
+          <label class="label-credentials" for="last_name">
             <span>Apellido</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="last_name" required>
           </label>
           <label class="label-credentials" for="birthdate">
             <span>Fecha nacimiento</span>
-            <input class="credentials" type="date" required>
+            <input class="credentials" type="date" name="birthdate" required>
           </label>
           <label class="label-credentials" for="landline">
             <span>Telefono fijo</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="landline" required>
           </label>
-          <label class="label-credentials" for="mobile-phone">
+          <label class="label-credentials" for="mobile_phone">
             <span>Telefono movil</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="mobile_phone" required>
           </label>
-          <label class="label-credentials" for="family-phone">
+          <label class="label-credentials" for="family_phone">
             <span>Telefono familiar</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="family_phone" required>
           </label>
-          <label class="label-credentials" for="family-description">
+          <label class="label-credentials" for="family_description">
             <span>Descripcion familiar</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="family_description" required>
           </label>
           <label class="label-credentials" for="email">
             <span>Email</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="email" required>
           </label>
           <label class="label-credentials" for="area">
             <span>Área</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="area" required>
           </label>
           <label class="label-credentials" for="position">
             <span>Cargo</span>
-            <input class="credentials" type="text" required>
+            <input class="credentials" type="text" name="position" required>
           </label>
         </div>
       </section>
